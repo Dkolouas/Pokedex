@@ -12,7 +12,15 @@
 // let doubleSize = size * 2;
 // document.write(doubleSize);
 
-let size = 100;
-let doubleSize = size * 2;
-let minSize = (doubleSize * 2) - (size / 2);
-document.write(minSize);
+// let size = 100;
+// let doubleSize = size * 2;
+// let minSize = (doubleSize * 2) - (size / 2);
+// document.write(minSize);
+
+/*alert() makes pop ups
+console.log()writes in console log :P
+document.write()writes in document */
+
+alert('Hello world')
+let favoriteFood = 'Pasta'
+document.write(favoriteFood)
