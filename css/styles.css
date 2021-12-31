@@ -1,0 +1,29 @@
+:root {
+  --primary-color: #fff;
+  --secondary-color: #7db1e2;
+  --secondary-back-color: #dadde2;
+  --header-color: #000;
+  --link-color: #357b70;
+  --primary-font: Arial, serif;
+  --input-font: system-ui;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-size-body: 16px;
+  --font-size-h1: 30px;
+  --font-size-h2: 24px;
+  --font-size-h3: 18px;
+  --font-hover: 20px;
+  --navigation-font-size: 20px;
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: var(--primary-font);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-body);
+  line-height: 1.6;
+  text-align: center;
+  flex-direction: column;
+  margin: auto;
+  width: 80%
+}
