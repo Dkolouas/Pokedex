@@ -21,13 +21,15 @@ let pokemonList = [{
 ];
 // this loop allows the atributes to display on the DOM
 for (let i = 0; i < pokemonList.length; i++) {
-  document.write(pokemonList[i].name + ' (height: ' +
-    pokemonList[i].height + ', type: ' + pokemonList[i].type + ')')
-  // this adds a conditional for the height
+  // this adds condition for the height
   if (pokemonList[i].height > 1.5) {
-    document.write(' Wow, that’s big!')
+    document.write('<p>' + pokemonList[i].name + ' (height: ' +
+      pokemonList[i].height + ', type: ' + pokemonList[i].type + ')' + ' - Wow, that’s big!' + '</p>')
   }
-  // adds a break after each loop
-  document.write('<br>')
+  // or else this is executed if condition not met
+  else {
+    document.write('<p>' + pokemonList[i].name + ' (height: ' +
+      pokemonList[i].height + ', type: ' + pokemonList[i].type + ')' + '</p>')
+  }
 
 }
