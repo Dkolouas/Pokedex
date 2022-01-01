@@ -19,17 +19,21 @@ let pokemonList = [{
     type: ['Poison']
   }
 ];
-// this loop allows the atributes to display on the DOM
-for (let i = 0; i < pokemonList.length; i++) {
-  // this adds condition for the height
-  if (pokemonList[i].height > 1.5) {
-    document.write('<p>' + pokemonList[i].name + ' (height: ' +
-      pokemonList[i].height + ', type: ' + pokemonList[i].type + ')' + ' - Wow, that’s big!' + '</p>')
-  }
-  // or else this is executed if condition not met
-  else {
-    document.write('<p>' + pokemonList[i].name + ' (height: ' +
-      pokemonList[i].height + ', type: ' + pokemonList[i].type + ')' + '</p>')
-  }
 
+// added function 'forEach()' allows the atributes to display on the DOM
+function printPokemonList(pokemonList) {
+  pokemonList.forEach(function(pokemon) {
+    // this adds condition for the height
+    if (pokemon.height > 1.5) {
+      document.write('<p>' + pokemon.name + ' (height: ' +
+        pokemon.height + ', type: ' + pokemon.type + ')' + ' - Wow, that’s big!' + '</p>')
+    }
+    // or else this is executed if condition not met
+    else {
+      document.write('<p>' + pokemon.name + ' (height: ' +
+        pokemon.height + ', type: ' + pokemon.type + ')' + '</p>')
+    }
+  })
 }
+
+printPokemonList(pokemonList)
