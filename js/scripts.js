@@ -1,24 +1,39 @@
-let pokemonList = [{
-    name: 'Bulbasaur',
-    height: 0.7,
-    type: ['grass', 'poison']
-  },
-  {
-    name: 'Charmander',
-    height: 0.6,
-    type: ['fire']
-  },
-  {
-    name: 'Squirtle',
-    height: 0.5,
-    type: ['water']
-  },
-  {
-    name: 'Arbok',
-    height: 3.5,
-    type: ['Poison']
+let pokemonRepository = (function() {
+  let pokemonList = [{
+      name: 'Bulbasaur',
+      height: 0.7,
+      type: ['grass', 'poison']
+    },
+    {
+      name: 'Charmander',
+      height: 0.6,
+      type: ['fire']
+    },
+    {
+      name: 'Squirtle',
+      height: 0.5,
+      type: ['water']
+    },
+    {
+      name: 'Arbok',
+      height: 3.5,
+      type: ['Poison']
+    }
+  ];
+
+  function add(pokemon) {
+    pokemonList.push(pokemon);
   }
-];
+
+  function getAll() {
+    return pokemonList;
+  }
+
+  return {
+    add: add,
+    getAll: getAll
+  };
+})();
 
 // added function 'forEach()' allows the atributes to display on the DOM
 function printPokemonList(pokemonList) {
@@ -36,4 +51,4 @@ function printPokemonList(pokemonList) {
   })
 }
 
-printPokemonList(pokemonList)
+printPokemonList(pokemonRepository.getAll())
