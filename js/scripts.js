@@ -29,26 +29,39 @@ let pokemonRepository = (function() {
     return pokemonList;
   }
 
+  function addListItem(pokemon) {
+    let pokemonList = document.querySelector('.pokemon-list');
+    let pokemonItem = document.createElement('li');
+    let button = document.createElement('button');
+    button.innerText = pokemon.name;
+    button.classList.add('pokemon-button');
+    pokemonItem.appendChild(button);
+    pokemonList.appendChild(pokemonItem);
+    //event
+    button.addEventListener('click', function(event) {
+      showDetails(pokemon);
+    });
+  }
+  //event trigures
+  function showDetails(pokemon) {
+    console.log(pokemon.name);
+  }
+
   return {
     add: add,
-    getAll: getAll
+    getAll: getAll,
+    addListItem: addListItem
   };
 })();
+//adds pokemon to the list
+pokemonRepository.add({
+  name: "Pikachu",
+  height: 0.3,
+  types: ["electric"]
+});
 
-// added function 'forEach()' allows the atributes to display on the DOM
-function printPokemonList(pokemonList) {
-  pokemonList.forEach(function(pokemon) {
-    // this adds condition for the height
-    if (pokemon.height > 1.5) {
-      document.write('<p>' + pokemon.name + ' (height: ' +
-        pokemon.height + ', type: ' + pokemon.type + ')' + ' - Wow, that’s big!' + '</p>')
-    }
-    // or else this is executed if condition not met
-    else {
-      document.write('<p>' + pokemon.name + ' (height: ' +
-        pokemon.height + ', type: ' + pokemon.type + ')' + '</p>')
-    }
-  })
-}
+console.log(pokemonRepository.getAll());
 
-printPokemonList(pokemonRepository.getAll())
+pokemonRepository.getAll().forEach(function(pokemon) {
+  pokemonRepository.addListItem(pokemon);
+});
