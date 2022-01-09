@@ -1,6 +1,6 @@
 let pokemonRepository = (function() {
   let pokemonList = [];
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=5';
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=100';
   let modalContainer = document.querySelector('#modal-container');
 
   function add(pokemon) {
@@ -74,14 +74,14 @@ let pokemonRepository = (function() {
 
     let closeButtonElement = document.createElement('button');
     closeButtonElement.classList.add('modal-close');
-    closeButtonElement.innerText = 'Close';
+    closeButtonElement.innerText = 'X';
     closeButtonElement.addEventListener('click', hideModal);
 
     let titleElement = document.createElement('h2');
     titleElement.innerText = pokemon.name;
 
     let contentElement = document.createElement('p');
-    contentElement.innerText = pokemon.height;
+    contentElement.innerText = 'Height: ' + pokemon.height;
 
     let imageElement = document.createElement('img');
     imageElement.src = pokemon.imageUrl;
@@ -107,18 +107,13 @@ let pokemonRepository = (function() {
     }
   });
 
-  // modalContainer.addEventListener('click', (e) => {
-  //   let target = e.target;
-  //   if (target === modalContainer) {
-  //     hideModal();
-  //   }
-  // });
+  modalContainer.addEventListener('click', (e) => {
+    let target = e.target;
+    if (target === modalContainer) {
+      hideModal();
+    }
+  });
 
-  fetch('https://pokeapi.co/api/v2/pokemon/').then(function(response) {
-    return response.json();
-  }).then(function(pokemonList) {
-    console.log(pokemonList);
-  }).catch(function() {});
 
   return {
     add: add,
