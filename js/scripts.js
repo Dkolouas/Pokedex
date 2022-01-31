@@ -1,7 +1,7 @@
 let pokemonRepository = (function () {
   //list of pokemon Array
   let pokemonList = [];
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=1000';
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=300';
   //let modalContainer = document.querySelector('#modal-container');
 
   function add(pokemon) {
