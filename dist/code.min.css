@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: auto;
+}
+body {
+  font-family: 'Sedgwick Ave Display', cursive;
+  line-height: 1.6;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-image: url('../images/backround.jpg');
+  background-size: 100%;
+  background-repeat: repeat;
+}
+button:hover,
+button:focus,
+.pokemon-button:hover,
+.pokemon-button:focus {
+  opacity: 0.9;
+  font-size: 20px;
+  background-color: #cc0000;
+  cursor: inherit;
+}
+.button {
+  background-color: #3b4cca;
+  color: #fff;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  border: 2px solid rgb(150, 198, 152);
+  width: 90%;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.19);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+img {
+  width: 30%;
+  display: flex;
+  margin: auto;
+}
+div.card {
+  background-color: rgb(236, 236, 212);
+  background-color: transparent 30%;
+}
+.title {
+  margin-top: 10%;
+  color: #fff;
+}
+.navbar {
+  background-color: tomato;
+}
+body {
+  cursor: url('data:image/x-icon;base64, AAACAAEAICAQAAAAAADoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAA ////AAAA/wABAYIARURCAOKv+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAREREAAAAAAAAAAAAAAAAQREREUQAAAAAAAAAAAAABBAAERERQAAAAAAAAAAAAEEAEAAAARQAAAAAAAAAAABAAREAAAAEAAAAAAAAAAAAAAAQAzMwAAAAAAAAAAAAAAIgACIzMzMAAAAAAAAAAAAiIiIiIjMzMAAAAAAAAAACIiIiIiIjMzAAAAAAAAAAAiIiIiIiIzMwAAAAAAAAAAIiVSIiIiIzMAAAAAAAAAAAJRFSIiIiMwAAAAAAAAAAACURUiIiIjMAAAAAAAAAAAACVSIiIiIwAAAAAAAAAAAAACIiIiIjAAAAAAAAAAAAAAAAIiIiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////////////////////////////////////////////////////////wP///wA///4AH//8AA//+FAH//gAB//wUAP/8AAD//AAA//wAAP/8AAD//AAA//4AAf/+AAH//wAD//+AB///wA////A/////////////w=='),
+    auto;
+}
