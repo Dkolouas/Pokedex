@@ -1,7 +1,7 @@
 let pokemonRepository = (function () {
   //list of pokemon Array
   let pokemonList = [];
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=300';
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=1000';
   //let modalContainer = document.querySelector('#modal-container');
 
   function add(pokemon) {
@@ -135,6 +135,30 @@ $(document).ready(function(){
     });
   });
 });
+
+ 
+// search function
+
+$(document).ready(function(){
+  $("#search-pokemon").on("keyup", function(){
+    var value = $(this).val().toLowerCase();
+    // $(".button-class").filter(function() {
+    //    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    //})
+    
+  $(".pokemon-list .card-body").each(function () {
+    if (
+      $(this).children(".card-title").text().indexOf(value) > -1
+    ) {
+      $(this).parent().show();
+    } else {
+      $(this).parent().hide();
+    }
+    });
+  });
+}); 
+
+
 
   return {
       add: add,
